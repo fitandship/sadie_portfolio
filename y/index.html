@@ -1,89 +1,649 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.18.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.18.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.18.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<head>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+<meta name="description" content="Sadie Stokes Portfolio">
+<meta name="author" content="Sadie Stokes">
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>Sadie Stokes</title>
+
+<!-- Google Fonts -->
+
+<!-- /Google Fonts -->
+
+<!-- Styles -->
+<link type="text/css" rel="stylesheet" href="css/base.css" />
+<link type="text/css" rel="stylesheet" href="css/animate.css" />
+<link type="text/css" rel="stylesheet" href="css/magnific-popup.css" />
+<link type="text/css" rel="stylesheet" href="css/owl-carousel.css" />
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+<!-- /Styles -->
+
+</head>
+
+<body>
+
+
+<!-- Wrapper All -->
+<div class="rewall_fn_wrapper_all" data-nav-skin="transdark">
+	
+	<!-- Wrapper -->
+	<div class="rewall_fn_wrapper">
+	
+		
+		<div class="rewall_fn_mobilemenu_wrap">
+		   
+		   	<!-- LOGO & HAMBURGER -->
+		   	<div class="logo_hamb">
+			  	<div class="in">
+				 	<div class="menu_logo">
+						<a href="index.html"><img src="img/logo-light.png" alt="" /></a>
+				 	</div>
+				 	<div class="hamburger hamburger--collapse-r">
+						<div class="hamburger-box">
+					   		<div class="hamburger-inner"></div>
+						</div>
+				 	</div>
+			 	</div>
+		   	</div>
+		   	<!-- /LOGO & HAMBURGER -->
+		   	<!-- MOBILE DROPDOWN MENU -->
+		   	<div class="mobilemenu">
+			 	<div>
+					<ul class="anchor_nav vert_menu_list">
+						<li class="current"><a href="#about">Home</a></li>
+						<li><a href="#biography">About Me</a></li>
+						<li><a href="#portfolio">Past Work</a></li>
+						<li><a href="#service">Services</a></li>
+						<li><a href="#contact">Contact Me</a></li>
+					</ul>
+			  	</div>
+		   	</div>
+		   	<!-- /MOBILE DROPDOWN MENU -->
+		</div>
+	
+
+		<!-- Left Sidebar -->
+		<!-- You can set up minimum and maximum width for sidebar (in px). Minimum width is 350 -->
+		<div class="rewall_fn_sidebar" data-max="800" data-min="350">
+
+			<!-- Sidebar: Close Button -->
+			<a href="#" class="nav__button">
+				<span class="icon"><img src="svg/right-arrow.svg" alt="" class="fn__svg" /></span>
+				<span class="width_indicator"></span>
+			</a>
+			<!-- /Sidebar: Close Button -->
+			
+			<!-- Sidebar: Line -->
+			<div class="nav_line"></div>
+			<!-- /Sidebar: Line -->
+
+			<!-- Sidebar: content -->
+			<div class="sidebar_in">
+				<div class="logo">
+					<a href="index.html">
+						<img src="img/logo.png" alt="" />
+					</a>
+				</div>
+				<div class="navigation">
+					<ul class="anchor_nav">
+						<li class="current"><a href="#about">Home</a></li>
+						<li><a href="#biography">About Me</a></li>
+						<li><a href="#portfolio">Past Work</a></li>
+						<li><a href="#service">Services</a></li>
+						<li><a href="#contact">Contact Me</a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<div class="social">
+						<ul>
+							<li><a href="https://www.facebook.com/sastokes/"><img src="svg/social/facebook.svg" alt="" class="fn__svg" /></a></li>
+							<li><a href="https://www.instagram.com/sadiealisha/"><img src="svg/social/instagram.svg" alt="" class="fn__svg" /></a></li>
+							<li><a href="https://www.linkedin.com/in/sadie-stokes/"><img src="svg/social/linkedin.svg" alt="" class="fn__svg" /></a></li>
+						</ul>
+					</div>
+					<div class="desc">
+						<p>© 2021 Sadie Stokes<br />Created by <a href="https://fitandappy.com/" target="_blank">Fit&Appy</a></p>
+					</div>
+				</div>
+			</div>
+			<!-- Sidebar: content -->
+			
+			
+
+		</div>
+		<!-- /Left Sidebar -->
+		
+		
+		
+			
+		<!-- Main Content -->
+		<div class="rewall_fn_content">
+			<div class="fn__page">
+				
+				
+				<!-- About Section -->
+				<section class="about" id="about">
+					
+					<!-- About Modern Shortcode -->
+					<div class="fn_cs_about_modern">
+						<div class="container">
+							<div class="row">
+								
+								<div class="left_part">
+									<div class="left_in" id="scene">
+										<div class="layer border" data-depth="0.2">
+											<span class="span1"></span>
+											<span class="span2"></span>
+											<img src="img/thumb/450-550.jpg" alt="">
+										</div>
+										<div class="img_holder layer" data-depth="0.3">
+											<img src="img/thumb/450-550.jpg" alt="">
+											<div class="abs_img" data-bg-img="img/about.jpg"></div>
+										</div>
+										<div class="dots layer" data-switch="disable" data-depth="0.4">
+										</div>
+									</div>
+								</div>
+								
+								<div class="right_part">
+									
+									<!-- Main Title -->
+									<div class="main_title">
+										<h3 style="color: black">Hi, I'm Sadie!</h3>
+										<p>Founder of <a href="https://frenify.com/" target="_blank" style="color: #00cae2">Fit&Appy</a>. Program Manager @ Microsoft and web and mobile developer based in Florida.</p>
+									</div>
+									<!-- /Main Title -->
+									
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<!-- About Modern Shortcode -->
+					
+				</section>
+				<!-- /About Section -->
+				
+				
+				<!-- Scroll to next section -->
+				<div class="fn__next_section">
+					<div class="container"><span></span></div>
+					<a href="#">
+						<img src="svg/right-arrow.svg" alt="" class="fn__svg" />
+					</a>
+				</div>
+				<!-- /Scroll to next section -->
+				
+				<!-- Biography Section -->
+				<section class="biography" id="biography">
+					
+					<!-- Main Title -->
+					<div class="main_title center">
+						<div class="container max880">
+							<h3>About Me</h3>
+							<p>I'm a Program Manager and Software developer that primarily specializes in web and mobile applications. I work with small and large businesses to help them define and create their vision!
+								
+							 I love working with new people and startups, new people are new experiences.</p>
+						</div>
+					</div>
+					<!-- /Main Title -->
+								
+					
+					<!-- Download CV Button -->
+					<div class="fn_cs_cv_btn">
+						<div class="container">
+							<span class="line top_hover"></span>
+							<span class="line bottom_hover"></span>
+							<span class="line top"></span>
+							<span class="line bottom"></span>
+							<a href="docs/SadieStokes2021.pdf" download>
+								<span class="icon">
+									<img src="svg/inbox.svg" alt="" class="fn__svg" />
+									<img src="svg/arrow.svg" alt="" class="fn__svg arrow" />
+								</span>
+								<span>Download my Resume</span>
+							</a>
+						</div>
+					</div>
+					<!-- /Download CV Button -->
+					
+					
+					<!-- Tabs Shortcode -->
+					<div class="fn_cs_tabs">
+						<div class="container max880">
+							<div class="row">
+								
+								<!-- Tab: Header -->
+								<div class="tab_header">
+									<ul>
+										<li class="active"><a href="#tab1">Experience</a></li>
+										<li><a href="#tab2">Education</a></li>
+									</ul>
+								</div>
+								<!-- /Tab: Header -->
+								
+								<!-- Tab: Content -->
+								<div class="tab_content">
+									
+									<!-- #1 tab content -->
+									<div id="tab1" class="tab_item active">
+										
+										<!-- Boxed List -->
+										<div class="fn_cs_boxed_list">
+											<ul>
+												<li>
+													<div class="item">
+														<div class="item_top">
+															<h5>Microsoft</h5>
+															<span>( 2020 — Present )</span>
+														</div>
+														<h3>Sr. Program Manager</h3>
+														<p>I work in the Federal space to create a reporting tool that is used by multiple downstream users within Microsoft.  </p>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<div class="item_top">
+															<h5>Boeing</h5>
+															<span>( 2018 — 2020 )</span>
+														</div>
+														<h3>Product Manager</h3>
+														<p>I worked with internal and external teammates to manage and enhance the laptop and asset refresh process. We constantly looked for ways to improve the process and replicate it worldwide. </p>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<div class="item_top">
+															<h5>Boeing</h5>
+															<span>( 2013 — 2018 )</span>
+														</div>
+														<h3>Software Developer</h3>
+														<p>I worked as a developer, product manager and tester on a web and desktop application used by engineers to  </p>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<div class="item_top">
+															<h5>AppRiver</h5>
+															<span>( 2012 — 2013 )</span>
+														</div>
+														<h3>Software Test Analyst</h3>
+														<p>I worked with a team of developers to create an automated testing suite for an internal web application. </p>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!-- /Boxed List -->
+										
+									</div>
+									<!-- /#1 tab content -->
+									
+									<!-- #2 tab content -->
+									<div id="tab2" class="tab_item">
+										
+										<!-- Boxed List -->
+										<div class="fn_cs_boxed_list">
+											<ul>
+												<li>
+													<div class="item">
+														<div class="item_top">
+															<h5>Stevens Institue of Technology</h5>
+															<span>( 2018 — 2020 )</span>
+														</div>
+														<h3>MS Computer Software Engineering</h3>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<div class="item_top">
+															<h5>Cornell University</h5>
+															<span>( 2018 — 2018 )</span>
+														</div>
+														<h3>Women in Leadership Certificate</h3>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<div class="item_top">
+															<h5>Carnegie Mellon</h5>
+															<span>( 2015 — 2016 )</span>
+														</div>
+														<h3>Data Analytics Certificate</h3>
+													</div>
+												</li>
+												<li>
+													<div class="item">
+														<div class="item_top">
+															<h5>Liberty University</h5>
+															<span>( 2007 — 2011 )</span>
+														</div>
+														<h3>Bachelors Degree in Human Resource Managment</h3>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!-- /Boxed List -->
+											
+									</div>
+									<!-- /#2 tab content -->
+									
+							
+									
+								</div>
+								<!-- /Tab: Content -->
+								
+							</div>
+						</div>
+					</div>
+					<!-- /Tabs Shortcode -->
+					
+				</section>
+				<!-- /Biography Section -->
+				
+				<!-- Scroll to next section -->
+				<div class="fn__next_section">
+					<div class="container"><span></span></div>
+					<a href="#">
+						<img src="svg/right-arrow.svg" alt="" class="fn__svg" />
+					</a>
+				</div>
+				<!-- /Scroll to next section -->
+				
+				<!-- Portfolio Section -->
+				<section class="portfolio" id="portfolio">
+				
+					<!-- Main Title -->
+					<div class="main_title center">
+						<div class="container max880">
+							<h3>My Past Work</h3>
+							<p>Now, I’m working on a professional, visually sophisticated and technologically proficient, responsive and multi-functional wordpress theme Elonissa. If you are interested to work with me, click below button and contact with me right now, so we can talk about your project.</p>
+							<div class="main_button">
+								<a href="#contact">Wanna see more? Get in touch!</a>
+							</div>
+						</div>
+					</div>
+					<!-- /Main Title -->
+					
+					<div class="portfolio_list">
+						<div class="container">
+							<ul class="fn__masonry gallery_zoom">
+
+								<li class="masonry_in">
+									<div class="item">
+										<div class="title_holder">
+											<h3><a class="fn__link zoom" href="img/portfolio/1.jpg" data-title="Smashing Magazine Print">Smashing Magazine Print</a></h3>
+											<p>illustration, design</p>
+										</div>
+
+										<div class="img_holder">
+											<a class="zoom" href="img/portfolio/1.jpg" data-title="Smashing Magazine Print"></a>
+											<img src="img/thumb/square.jpg" alt="">
+											<div class="abs_img" data-bg-img="img/portfolio/1.jpg"></div>
+										</div>
+									</div>
+								</li>
+
+								<li class="masonry_in">
+									<div class="item">
+										<div class="title_holder">
+											<h3><a class="fn__link zoom" href="img/portfolio/2.jpg" data-title="Revolution Book">Revolution Book</a></h3>
+											<p>illustration, design</p>
+										</div>
+
+										<div class="img_holder">
+											<a class="zoom" href="img/portfolio/2.jpg" data-title="Revolution Book"></a>
+											<img src="img/thumb/square.jpg" alt="">
+											<div class="abs_img" data-bg-img="img/portfolio/2.jpg"></div>
+										</div>
+									</div>
+								</li>
+
+								<li class="masonry_in">
+									<div class="item">
+										<div class="title_holder">
+											<h3><a class="fn__link zoom" href="img/portfolio/3.jpg" data-title="Dreamers Logo">Dreamers Logo</a></h3>
+											<p>illustration, design</p>
+										</div>
+
+										<div class="img_holder">
+											<a class="zoom" href="img/portfolio/3.jpg" data-title="Dreamers Logo"></a>
+											<img src="img/thumb/square.jpg" alt="">
+											<div class="abs_img" data-bg-img="img/portfolio/3.jpg"></div>
+										</div>
+									</div>
+								</li>
+
+								<li class="masonry_in">
+									<div class="item">
+										<div class="title_holder">
+											<h3><a class="fn__link zoom" href="img/portfolio/4.jpg" data-title="Reductive Design">Reductive Design</a></h3>
+											<p>illustration, design</p>
+										</div>
+
+										<div class="img_holder">
+											<a class="zoom" href="img/portfolio/4.jpg" data-title="Reductive Design"></a>
+											<img src="img/thumb/square.jpg" alt="">
+											<div class="abs_img" data-bg-img="img/portfolio/4.jpg"></div>
+										</div>
+									</div>
+								</li>
+
+
+							</ul>
+						</div>
+					</div>
+					
+					
+				</section>
+				<!-- /Portfolio Section -->
+				
+				
+				<!-- Scroll to next section -->
+				<div class="fn__next_section">
+					<div class="container"><span></span></div>
+					<a href="#">
+						<img src="svg/right-arrow.svg" alt="" class="fn__svg" />
+						<span class="fn__tooltip">Double click to scroll the screen to previous section</span>
+					</a>
+				</div>
+				<!-- /Scroll to next section -->
+				
+				<!-- Service Section -->
+				<section class="service" id="service">
+					
+					<!-- Main Title -->
+					<div class="main_title center">
+						<div class="container max880">
+							<h3>Services</h3>
+						</div>
+					</div>
+					<!-- /Main Title -->
+					
+					<!-- Boxed List -->
+					<div class="fn_cs_boxed_list modern">
+						<div class="container max1020">
+							<ul>
+								<li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
+									<div class="item">
+									
+										<h3>Web &amp; Design</h3>
+										<p>From low-fidelity wireframing and prototyping to a final coded design. We don't just hand off static designs, but enjoy working directly in the browser (♥ CSS) as much as with design tools such a <a class="fn__link" href="#">Figma</a>. We use can also setup complete sites in <a class="fn__link" href="#">Statamic</a> and <a class="fn__link" href="#">Kirby</a> and work alongside front-end developers to provide a complete service.</p>
+									</div>
+								</li>
+								<li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+									<div class="item">
+									
+										<h3>Brand Identity</h3>
+										<p>From a single logomark to <a class="fn__link" href="#">a full branding system</a>. A brand new logo may not be the answer for you, we strongly believe in refining and updating existing logos to increase effectiveness without losing brand equity.</p>
+									</div>
+								</li>
+								<li class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s">
+									<div class="item">
+									
+										<h3>Iconography</h3>
+										<p>This is a speciality of ours, and we have worked with Skype, Spotify and Dyson (to name just a few). The process of reducing an idea to it's simplest, but still recognisable form is joyous!</p>
+									</div>
+								</li>
+								<li class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.6s">
+									<div class="item">
+									
+										<h3>Print</h3>
+										<p>We come from a traditional print publishing background, starting in the last days of paste up artwork.</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<!-- /Boxed List -->
+					
+					
+				</section>
+				<!-- /Service Section -->
+				
+
+				<!-- Scroll to next section -->
+				<div class="fn__next_section">
+					<div class="container"><span></span></div>
+					<a href="#">
+						<img src="svg/right-arrow.svg" alt="" class="fn__svg" />
+					</a>
+				</div>
+				<!-- /Scroll to next section -->
+				
+				
+				<!-- Contact Section -->
+				<section class="contact" id="contact">
+					
+					<!-- Main Title -->
+					<div class="main_title center">
+						<div class="container max880">
+							<h3>Contact Me</h3>
+						</div>
+					</div>
+					<!-- /Main Title -->
+					
+					<!-- Contact -->
+					<div class="rewall_fn_contact">
+						<div class="container max880">					
+							
+							<!-- Contact Form -->
+							<form class="contact_form" action="/" method="post" autocomplete="off" data-email="sadie@fitandappy.com.com">
+								
+
+								<div class="success" data-success="Your message has been received, we will contact you soon."></div>
+								<div class="empty_notice"><span>Please Fill Required Fields!</span></div>
+								<!-- -->
+								
+								<div class="items_wrap">
+									<div class="items">
+										<div class="item half">
+											<div class="input_wrapper">
+												<input id="name" type="text" />
+												<span class="moving_placeholder">Name *</span>
+											</div>
+										</div>
+										<div class="item half">
+											<div class="input_wrapper">
+												<input id="email" type="email" />
+												<span class="moving_placeholder">Email *</span>
+											</div>
+										</div>
+										<div class="item">
+											<div class="input_wrapper">
+												<input id="phone" type="phone" />
+												<span class="moving_placeholder">Phone</span>
+											</div>
+										</div>
+										<div class="item">
+											<div class="input_wrapper">
+												<textarea id="message"></textarea>
+												<span class="moving_placeholder">Message</span>
+											</div>
+										</div>
+										<div class="item">
+											<a id="send_message" href="#">Send Me a Message!</a>
+										</div>
+									</div>
+								</div>
+							</form>
+							<!-- /Contact Form -->
+							
+							
+							<!-- Contact Info -->
+							<div class="fn_cs_contact_info">
+								<p>Based in</p>
+								<h3>Florida, USA</h3>
+								<p><a class="fn__link" href="mailto:sadie@fitandappy.com">sadie@fitandappy.com</a></p>
+							</div>
+							<!-- /Contact Info -->
+							
+							
+						</div>
+					</div>
+					<!-- /Contact -->
+					
+				</section>
+				<!-- /Contact Section -->
+				
+		
+			</div>
+		</div>
+		<!-- Main Content -->
+		
+	</div>
+	<!-- /Wrapper -->
+	
+</div>
+<!-- /Wrapper All -->
+
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/magnific-popup.js"></script>
+<script type="text/javascript" src="js/onepage.js"></script>
+<script type="text/javascript" src="js/owl-carousel.js"></script>
+<script type="text/javascript" src="js/isotope.js"></script>
+<script type="text/javascript" src="js/parallax.js"></script>
+<script type="text/javascript" src="js/waypoints.js"></script>
+<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->
+<script type="text/javascript" src="js/init.js"></script>
+<!-- /Scripts -->
+<script type="module">
+	// Import the functions you need from the SDKs you need
+	import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
+	import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
+	// TODO: Add SDKs for Firebase products that you want to use
+	// https://firebase.google.com/docs/web/setup#available-libraries
+  
+	// Your web app's Firebase configuration
+	// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+	const firebaseConfig = {
+	  apiKey: "AIzaSyALkaEyUe_l8bHqu4zoiVC8UR55SAErGJw",
+	  authDomain: "sadie-portfolio.firebaseapp.com",
+	  projectId: "sadie-portfolio",
+	  storageBucket: "sadie-portfolio.appspot.com",
+	  messagingSenderId: "1060734524245",
+	  appId: "1:1060734524245:web:c35832f07825837d496ddc",
+	  measurementId: "G-QMV7WYYS96"
+	};
+  
+	// Initialize Firebase
+	const app = initializeApp(firebaseConfig);
+	const analytics = getAnalytics(app);
+  </script>
+
+</body>
 </html>
